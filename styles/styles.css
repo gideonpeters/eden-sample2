@@ -252,9 +252,6 @@ button {
   margin-left: 8px;
 }
 
-.app__timeline {
-}
-
 .app__timeline-item {
   margin-top: 30px;
 }
@@ -292,6 +289,7 @@ button {
   font-weight: 300;
   letter-spacing: NaNpx;
   line-height: 19px;
+  flex: 1;
 }
 
 .app__footer {
@@ -342,6 +340,12 @@ button {
   top: 0px;
   display: flex;
   align-items: flex-end;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.app__view-meals__modal.active {
+  opacity: 1;
 }
 
 .app__view-meals__sheet {
@@ -350,11 +354,32 @@ button {
 }
 
 .app__view-meals__sheet__actions {
-  border-radius: 20px 20px 0 0;
-  background-color: #f9f5e1;
-  height: 87px;
-  width: 100%;
+  border-radius: 6px;
+  background-color: #e78f00;
+  height: 57px;
+  width: 85%;
   display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.app__view-meals__modal.active .app__view-meals__sheet__actions {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  margin-left: 0;
+  margin-right: 0;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  height: 87px;
+  background-color: #f9f5e1;
 }
 
 .app__view-meals__sheet__actions__title {
@@ -385,7 +410,16 @@ button {
 
 .app__view-meals__sheet__body {
   background-color: white;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.app__view-meals__modal.active .app__view-meals__sheet__body {
   height: calc((100vh * 0.8) - 87px);
+  overflow: auto;
+  opacity: 1;
 }
 
 .app__view-meals__items {
@@ -422,16 +456,28 @@ button {
 
 .app__view-meal-item__modal {
   position: fixed;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 25;
+  top: 50%;
+  left: 28px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.app__view-meal-item__modal.active {
+  opacity: 1;
   height: 100vh;
   max-height: 100vh;
   overflow-y: hidden;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 25;
   right: 0px;
   top: 0px;
-  display: flex;
-  align-items: center;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .app__view-meal-item__image {
@@ -446,7 +492,7 @@ button {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -463,7 +509,7 @@ button {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .app__container {
-    padding: 0px 10rem;
+    padding: 28px 10rem;
   }
 
   .app__footer {
@@ -474,25 +520,28 @@ button {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .app__container {
-    padding: 0px 12rem;
+    padding: 28px 12rem;
   }
 
   .app__footer {
     padding: 0px 12rem;
+  }
+
+  .app__getting-started__cta {
+    justify-content: start;
+  }
+  .app__getting-started__cta__item {
+    width: 50%;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .app__container {
-    padding: 0px 30rem;
+    padding: 28px 30rem;
   }
 
   .app__footer {
     padding: 0px 30rem;
   }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 }

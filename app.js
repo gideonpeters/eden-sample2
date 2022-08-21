@@ -15,19 +15,23 @@ const startApp = () => {
 
   viewMealsButton.addEventListener("click", () => {
     viewMealsModal.classList.remove("hidden");
+    viewMealsModal.classList.add("active");
   });
 
   closeViewMealsModalButton.addEventListener("click", () => {
+    viewMealsModal.classList.remove("active");
     viewMealsModal.classList.add("hidden");
   });
 
   mealItem.forEach((item) => {
     item.addEventListener("click", () => {
       viewMealItemModal.classList.remove("hidden");
+      viewMealItemModal.classList.add("active");
     });
   });
 
   viewMealItemModal.addEventListener("click", () => {
+    viewMealItemModal.classList.remove("active");
     viewMealItemModal.classList.add("hidden");
   });
 };
