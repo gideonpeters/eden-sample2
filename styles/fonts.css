@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "PT Serif";
+  src: url("../assets/fonts/pt-serif/PT_Serif-Web-Regular.ttf");
+  src: url("../assets/fonts/pt-serif/PT_Serif-Web-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../assets/fonts/pt-serif/PT_Serif-Web-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../assets/fonts/pt-serif/PT_Serif-Web-Italic.ttf")
+    format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../assets/fonts/pt-serif/PT_Serif-Web-BoldItalic.ttf")
+    format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url("../assets/fonts/cerebri-sans/CerebriSans-Book.ttf");
+  src: url("../assets/fonts/cerebri-sans/CerebriSans-Light.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url("../assets/fonts/cerebri-sans/CerebriSans-Bold.ttf")
+      format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-ExtraBold.ttf")
+      format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-Heavy.ttf") format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-SemiBold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Cerebri Sans";
+  src: url("../assets/fonts/cerebri-sans/CerebriSans-Book-Italic.ttf")
+      format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-Italic.ttf")
+      format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-Bold-Italic.ttf")
+      format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-ExtraBold-Italic.ttf")
+      format("truetype"),
+    url("../assets/fonts/cerebri-sans/CerebriSans-SemiBold-Italic.ttf")
+      format("truetype");
+  font-style: italic;
+}
