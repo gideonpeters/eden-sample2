@@ -37,9 +37,12 @@
           <div class="app__check-meal__info action-card__info">
             View your meals for the week.
           </div>
-          <div class="app__check-meal__cta action-card__cta">
+          <button
+            class="app__check-meal__cta action-card__cta"
+            data-action="view-meals-button"
+          >
             <div class="app__check-meal__cta">Check 'em</div>
-          </div>
+          </button>
         </div>
         <div class="app__getting-started">
           <div class="app__getting-started__title">Getting Started</div>
@@ -136,15 +139,21 @@
             <div class="app__footer-item__label">Chat</div>
           </div>
         </div>
-        <div class="app__view-meals__modal" style="display: none">
+        <div
+          class="app__view-meals__modal hidden"
+          data-action="view-meals-modal"
+        >
           <div class="app__view-meals__sheet">
             <div class="app__view-meals__sheet__actions">
               <div class="app__view-meals__sheet__actions__title">
                 Today's Meal
               </div>
-              <div class="app__view-meals__sheet__actions__close">
+              <button
+                class="app__view-meals__sheet__actions__close"
+                data-action="close-view-meals-button"
+              >
                 <img src="assets/images/icons/sm-close-icon.png" alt="" />
-              </div>
+              </button>
             </div>
             <div class="app__view-meals__sheet__body">
               <div class="app__view-meals__items">
@@ -230,7 +239,10 @@
             </div>
           </div>
         </div>
-        <div class="app__view-meal-item__modal" style="display: none">
+        <div
+          class="app__view-meal-item__modal hidden"
+          data-action="view-meal-item-modal"
+        >
           <div class="app__view-meal-item__image">
             <img src="assets/images/meal-1.png" alt="" />
           </div>
